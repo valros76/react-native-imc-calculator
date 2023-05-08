@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Image, Button } from 'react-native';
 import { WelcomeText } from '../components';
+import * as RNElements from '@rneui/base';
 
 class HomeScreen extends React.Component {
    render() {
@@ -9,16 +10,30 @@ class HomeScreen extends React.Component {
             <WelcomeText text="Calculateur d'IMC" />
             <Image
                style={styles.homeImg}
-               source={{
-                  uri: "https://images.unsplash.com/photo-1559724087-a45f6a7a35d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80",
-               }}
+               source={require("../assets/imc-calulator-home-logo.png")}
             />
 
-            <Button
+            <RNElements.Button
                title="Calculer mon IMC"
+               titleStyle={{ 
+                  color: 'white', 
+                  marginHorizontal: 20, 
+                  fontWeight: "bold", 
+                  letterSpacing: 1.5,
+                  fontSize:24,
+               }}
+               buttonStyle={{
+                  backgroundColor: 'black',
+                  borderWidth: 2,
+                  paddingTop:16,
+                  paddingBottom:16,
+                  borderColor: 'white',
+                  borderRadius: 8,
+               }}
                onPress={() => {
                   this.props.navigation.navigate("Calculator")
                }}
+
             />
          </View>
       );
@@ -30,12 +45,14 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
+      justifyContent: "space-between",
+      paddingBottom:64,
    },
    homeImg: {
-      width: 256,
-      height: 256,
-      borderRadius: 64,
-      margin: 64,
+      width: 170,
+      height: 72,
+      borderRadius: 4,
+      margin: 96,
    },
 })
 
