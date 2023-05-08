@@ -6,6 +6,8 @@ import { HomeScreen, CalculatorScreen, AboutScreen, NavigationTabs } from './scr
 
 const Stack = createStackNavigator();
 
+//preBuild
+
 export default function App() {
   return (
     <NavigationContainer>
