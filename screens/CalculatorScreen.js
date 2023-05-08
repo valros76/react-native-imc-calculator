@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { ImcCalculator } from '../components';
+
 class CalculatorScreen extends React.Component {
    render() {
       return (

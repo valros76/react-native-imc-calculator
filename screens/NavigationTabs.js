@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Foundation as FoundationIcons } from 'react-native-vector-icons';
 import HomeScreen from './HomeScreen';
 import CalculatorScreen from './CalculatorScreen';
-import TestScreen from './TestScreen';
+import AboutScreen from './AboutScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,13 +23,12 @@ const NavigationTabs = () => {
           ),
           title: "Calculer mon IMC",
         }} />
-        <Tab.Screen name="TestScreen" component={TestScreen} options={{
-          tabBarLabel: 'TEST',
+        <Tab.Screen name="AboutScreen" component={AboutScreen} options={{
+          tabBarLabel: 'À propos',
           tabBarIcon: ({ color, size }) => (
             <FoundationIcons name="widget" color={color} size={size} />
           ),
-          title: "Page de test",
-          tabBarBadge: "test",
+          title: "À propos",
         }} />
       </Tab.Navigator>
     )

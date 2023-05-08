@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen, CalculatorScreen, TestScreen, NavigationTabs } from './screens';
+import { HomeScreen, CalculatorScreen, AboutScreen, NavigationTabs } from './screens';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ export default function App() {
         <Stack.Screen name="NavigationTabs" component={NavigationTabs} options={{ headerShown: false, }}/>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Calculator" component={CalculatorScreen}/>
-        <Stack.Screen name="TestScreen" component={TestScreen} />
+        <Stack.Screen name="AboutScreen" component={AboutScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

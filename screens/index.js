@@ -1,11 +1,11 @@
 import HomeScreen from './HomeScreen';
 import CalculatorScreen from './CalculatorScreen';
-import TestScreen from './TestScreen';
+import AboutScreen from './AboutScreen';
 import NavigationTabs from '../screens/NavigationTabs';
 
 export {
    HomeScreen,
    CalculatorScreen,
-   TestScreen,
+   AboutScreen,
    NavigationTabs,
 }
