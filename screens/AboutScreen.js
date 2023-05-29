@@ -43,19 +43,25 @@ class AboutScreen extends React.Component {
                source={require("../assets/animated_cat.gif")}
                margin={32}
             />
-               <SectionList
-                  sections={aboutSectionsDatas}
-                  keyExtractor={(item, index) => item + index}
-                  renderItem={({ item }) => (
-                     <View style={styles.item}>
-                        <Text style={styles.sectionListTitle}>{item}</Text>
-                     </View>
-                  )}
-                  renderSectionHeader={({ section: { title } }) => (
-                     <Text style={styles.sectionListHeader}>{title}</Text>
-                  )}
-                  style={styles.sectionList}
-               />
+            <SectionList
+               sections={aboutSectionsDatas}
+               keyExtractor={(item, index) => item + index}
+               renderItem={({ item }) => (
+                  <View style={styles.item}>
+                     <Text style={styles.sectionListTitle}>
+                        {item}
+                     </Text>
+                  </View>
+               )}
+               renderSectionHeader={({ section: { title } }) => (
+                  <Text
+                     style={styles.sectionListHeader}
+                  >
+                     {title}
+                  </Text>
+               )}
+               style={styles.sectionList}
+            />
          </View>
       );
    }
@@ -69,18 +75,18 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
    },
    sectionList: {
-      width:"100%",
-      flex:1,
+      width: "100%",
+      flex: 1,
       textAlign: "center",
    },
    sectionListTitle: {
       fontSize: 18,
       textAlign: "center",
-      color:"#666",
+      color: "#666",
    },
    sectionListHeader: {
       fontSize: 22,
-      fontWeight:"700",
+      fontWeight: "700",
       backgroundColor: '#fff',
       padding: 10,
       textAlign: "center",

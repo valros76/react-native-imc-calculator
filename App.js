@@ -12,6 +12,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar style="light" translucent={false} />
+
       <Stack.Navigator>
         <Stack.Screen name="NavigationTabs" component={NavigationTabs} options={{ headerShown: false, }}/>
         <Stack.Screen name="Home" component={HomeScreen} />

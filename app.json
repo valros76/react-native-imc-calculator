@@ -4,7 +4,7 @@
     "slug": "react-native-imc-calculator",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/imc-calculator-app-icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/imc-calculator-app-icon_foreground.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.webdevoo.reactnativeimccalculator"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon-imc-calculator.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2e7a11e4-5891-49ae-a152-c71705db3fd5"
+      }
     }
   }
 }
